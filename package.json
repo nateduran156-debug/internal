@@ -1,0 +1,13 @@
+{
+  "name": "internal",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "mongodb": "^6.16.0"
+  }
+}
