@@ -147,3 +147,5 @@ const embed = new EmbedBuilder()
 await interaction.reply({ embeds: [embed], ephemeral: true });
 }
 });
+
+discordClient.login(token);
