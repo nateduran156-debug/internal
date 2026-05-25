@@ -5,7 +5,10 @@ const fs = require('fs');
 const uri = process.env.MONGODB_URI || "mongodb+srv://vpcn67_db_user:7MY7K2N4IMaNOsW3@cluster0.kwxhqks.mongodb.net/4amDB?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
-const token = "YOUR_BOT_TOKEN_HERE";
+const token = process.env.DISCORD_TOKEN;
+if (!token) {
+  throw new Error("Missing required environment variable: DISCORD_TOKEN");
+}
 
 client.connect().then(() => {
 console.log("Connected to MongoDB");
