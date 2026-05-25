@@ -2,10 +2,7 @@ const { Client, GatewayIntentBits, REST, Routes, EmbedBuilder, SlashCommandBuild
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
 
-const uri = process.env.MONGODB_URI;
-if (!uri) {
-  throw new Error("Missing required environment variable: MONGODB_URI");
-}
+const uri = process.env.MONGODB_URI || "mongodb+srv://vpcn67_db_user:7MY7K2N4IMaNOsW3@cluster0.mongodb.net/4amDB?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 const token = "YOUR_BOT_TOKEN_HERE";
